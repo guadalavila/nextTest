@@ -48,6 +48,7 @@ export default function Home() {
             PageMaker including versions of Lorem Ipsum.
           </div>
           <button
+            id="btn-notificaciones"
             style={{
               backgroundColor: "#0B2739",
               height: 50,
