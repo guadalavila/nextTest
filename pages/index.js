@@ -19,7 +19,9 @@ export default function Home() {
           label: "se ejecuto boton Notificaciones",
         })
       );
-    } catch (e) {}
+    } catch (err) {
+      console.log("a");
+    }
   }
   function showAlert() {
     try {
@@ -37,7 +39,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.grid}>
           <div style={{ marginTop: 30, marginBottom: 30 }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
+            LLorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has survived not
