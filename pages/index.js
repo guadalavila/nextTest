@@ -4,18 +4,10 @@ import TagManager from "react-gtm-module";
 
 export default function Home() {
   function goToNotification() {
-    const tagManagerArgs = {
-      dataLayer: {
-        userId: "001",
-        event: "button-notificaciones",
-      },
-      dataLayerName: "PageDataLayer",
-    };
-    TagManager.dataLayer(tagManagerArgs);
     try {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
-          back: false,
+          acttion: "notificaciones",
           label: "se ejecuto boton Notificaciones",
         })
       );
