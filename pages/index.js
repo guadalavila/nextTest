@@ -7,12 +7,12 @@ export default function Home() {
     try {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
-          acttion: "notificaciones",
+          action: "notificaciones",
           label: "se ejecuto boton Notificaciones",
         })
       );
     } catch (err) {
-      console.log("a");
+      console.log("No existe ReactNativeWebView");
     }
   }
   function showAlert() {
