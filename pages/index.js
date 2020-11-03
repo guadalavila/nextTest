@@ -1,23 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import TagManager from "react-gtm-module";
-
+import Router from "next/router";
 export default function Home() {
-  function handleClickVerFactura(e) {
-    e.preventDefault();
-    console.log("Ver detalle factura fue clickeado");
-    const tagManagerArgs = {
-      dataLayer: {
-        event: "facturas",
-        eventCategory: "facturas",
-        eventAction: "ver detalles de factura",
-        eventLabel: "factura del mes",
-      },
-    };
-    console.log(tagManagerArgs);
-    TagManager.dataLayer(tagManagerArgs);
-  }
-
   function goToNotification() {
     try {
       window.ReactNativeWebView.postMessage(
@@ -30,26 +15,22 @@ export default function Home() {
       console.log("No existe ReactNativeWebView");
     }
   }
-  function showAlert() {
+
+  function handleVerFacturas() {
     const tagManagerArgs = {
       dataLayer: {
-        event: "alerta",
-        eventCategory: "categoria",
-        eventAction: "accion",
-        eventLabel: "label",
-        eventValue: "value",
+        event: "screenView",
+        pageName: "facturas_ultimas_facturas",
       },
     };
     TagManager.dataLayer(tagManagerArgs);
-
-    // window.ReactNativeWebView.postMessage(
-    //   JSON.stringify({ back: true, label: "se ejecuto boton alerta" })
-    // );
+    Router.push("/facturas");
   }
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Test GTM</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
@@ -65,44 +46,34 @@ export default function Home() {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </div>
-          <button
-            id="btn-notificaciones"
+          {/* <button
             style={{
               backgroundColor: "#0B2739",
               height: 50,
               marginBottom: 20,
               width: 300,
-              borderRadius: 50,
+              borderRadius: 10,
             }}
             onClick={goToNotification}
           >
             <span style={{ color: "#fff", fontWeight: "bold", fontSize: 16 }}>
               Ir a notificaciones
             </span>
-          </button>
+          </button> */}
           <button
             style={{
               backgroundColor: "#019df4",
               height: 50,
               marginBottom: 20,
               width: 300,
-              borderRadius: 50,
+              borderRadius: 10,
             }}
-            onClick={showAlert}
+            onClick={handleVerFacturas}
           >
             <span style={{ color: "#fff", fontWeight: "bold", fontSize: 16 }}>
-              Ver alerta
+              Ver Facturas
             </span>
           </button>
-          <a
-            href="#"
-            onClick={handleClickVerFactura}
-            style={{
-              color: "#019df4",
-            }}
-          >
-            Ver detalle factura
-          </a>
         </div>
       </main>
     </div>
