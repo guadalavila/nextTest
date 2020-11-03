@@ -8,10 +8,9 @@ export default function Home() {
     console.log("Ver detalle factura fue clickeado");
     const tagManagerArgs = {
       dataLayer: {
-        event: "screenView",
-        pageName: "factura_detalle_de_factura",
+        event: "facturas",
         eventCategory: "facturas",
-        eventAction: "ver_detalle_de_factura",
+        eventAction: "ver detalles de factura",
         eventLabel: "factura del mes",
       },
     };
