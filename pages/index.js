@@ -3,6 +3,21 @@ import styles from "../styles/Home.module.css";
 import TagManager from "react-gtm-module";
 
 export default function Home() {
+  function handleClickVerFactura(e) {
+    e.preventDefault();
+    console.log("Ver detalle factura fue clickeado");
+    const tagManagerArgs = {
+      dataLayer: {
+        event: "screenView",
+        pageName: "factura_detalle_de_factura",
+        eventCategory: "facturas",
+        eventAction: "ver_detalle_de_factura",
+        eventLabel: "factura del mes",
+      },
+    };
+    TagManager.dataLayer(tagManagerArgs);
+  }
+
   function goToNotification() {
     try {
       window.ReactNativeWebView.postMessage(
@@ -79,6 +94,15 @@ export default function Home() {
               Ver alerta
             </span>
           </button>
+          <a
+            href="#"
+            onClick={handleClickVerFactura}
+            style={{
+              color: "#019df4",
+            }}
+          >
+            Ver detalle factura
+          </a>
         </div>
       </main>
     </div>
