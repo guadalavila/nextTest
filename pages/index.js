@@ -14,6 +14,7 @@ export default function Home() {
         eventLabel: "factura del mes",
       },
     };
+    console.log(tagManagerArgs);
     TagManager.dataLayer(tagManagerArgs);
   }
 
