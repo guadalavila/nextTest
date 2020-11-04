@@ -36,7 +36,7 @@ export default function Saldo() {
         </div>
         <button
           style={{
-            width: "15%",
+            width: 250,
             padding: 15,
             margin: 20,
             color: "#fff",
@@ -49,7 +49,7 @@ export default function Saldo() {
         </button>
         <button
           style={{
-            width: "15%",
+            width: 250,
             padding: 15,
             margin: 20,
             color: "#fff",
