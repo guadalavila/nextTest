@@ -4,17 +4,17 @@ import Router from "next/router";
 import { useEffect } from "react";
 import TagManager from "react-gtm-module";
 
+const tagManagerArgs = {
+  dataLayer: {
+    event: "screenView",
+    pageName: "home",
+  },
+};
 export default function Home() {
-  useEffect(() => {
-    console.log("Home cargado");
-    const tagManagerArgs = {
-      dataLayer: {
-        event: "screenView",
-        pageName: "home",
-      },
-    };
-    TagManager.dataLayer(tagManagerArgs);
-  }, []);
+  // useEffect(() => {
+  //   console.log("Home cargado");
+  //   TagManager.dataLayer(tagManagerArgs);
+  // }, []);
 
   function handleVerFacturas() {
     Router.push("/facturas");

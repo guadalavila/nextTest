@@ -3,17 +3,16 @@ import styles from "../styles/Home.module.css";
 import Router from "next/router";
 import { facturas } from "../utils/mock";
 import TagManager from "react-gtm-module";
-
+const tagManagerArgs = {
+  dataLayer: {
+    event: "screenView",
+    pageName: "facturas_ultimas_facturas",
+  },
+};
 export default function Facturas() {
-  useEffect(() => {
-    const tagManagerArgs = {
-      dataLayer: {
-        event: "screenView",
-        pageName: "facturas_ultimas_facturas",
-      },
-    };
-    TagManager.dataLayer(tagManagerArgs);
-  }, []);
+  // useEffect(() => {
+  //   TagManager.dataLayer(tagManagerArgs);
+  // }, []);
   function handleClickVerFactura(periodo) {
     const tagManagerArgs = {
       dataLayer: {
