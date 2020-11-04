@@ -4,6 +4,17 @@ import Router from "next/router";
 import TagManager from "react-gtm-module";
 
 export default function Saldo() {
+  useEffect(() => {
+    console.log("Saldo");
+    const tagManagerArgs = {
+      dataLayer: {
+        event: "screenView",
+        pageName: "saldo",
+      },
+    };
+    TagManager.dataLayer(tagManagerArgs);
+  }, []);
+
   function handleClickRecargar() {
     const tagManagerArgs = {
       dataLayer: {
