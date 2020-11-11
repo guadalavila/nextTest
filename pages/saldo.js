@@ -22,6 +22,7 @@ export default function Saldo() {
         eventCategory: "saldo",
         eventAction: "detalles de saldo",
         eventLabel: "recargar",
+        eventValue: 50,
       },
     };
     TagManager.dataLayer(tagManagerArgs);

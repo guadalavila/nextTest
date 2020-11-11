@@ -23,6 +23,7 @@ export default function Facturas() {
         eventCategory: "facturas",
         eventAction: "ver detalles de factura",
         eventLabel: `factura del mes ${periodo}`,
+        eventValue: 2020,
       },
     };
     TagManager.dataLayer(tagManagerArgs);
