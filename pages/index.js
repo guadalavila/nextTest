@@ -9,12 +9,9 @@ export default function Home() {
     try {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
-          type: "NavigationBar ",
-          data: {
+          type: "NavigationBar",
+          payload: {
             title: "Home",
-            showBackButton: true,
-            showReloadButton: false,
-            backgroundColor: "#007cad",
           },
         })
       );
