@@ -5,6 +5,24 @@ import { useEffect } from "react";
 import TagManager from "react-gtm-module";
 
 export default function Home() {
+  useEffect(() => {
+    try {
+      window.ReactNativeWebView.postMessage(
+        JSON.stringify({
+          type: "NavigationBar ",
+          data: {
+            title: "Home",
+            showBackButton: true,
+            showReloadButton: false,
+            backgroundColor: "#007cad",
+          },
+        })
+      );
+    } catch (err) {
+      console.log("ReactNativeWebView not exist");
+    }
+  }, []);
+
   function handleVerFacturas() {
     Router.push("/facturas");
   }
