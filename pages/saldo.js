@@ -18,6 +18,7 @@ export default function Saldo() {
           type: "NavigationBar",
           data: {
             title: "Saldo",
+            buttonLeft: true,
           },
         })
       );
