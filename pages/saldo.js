@@ -5,7 +5,6 @@ import TagManager from "react-gtm-module";
 
 export default function Saldo() {
   useEffect(() => {
-    console.log("Saldo");
     const tagManagerArgs = {
       dataLayer: {
         event: "screenView",
@@ -13,6 +12,18 @@ export default function Saldo() {
       },
     };
     TagManager.dataLayer(tagManagerArgs);
+    try {
+      window.ReactNativeWebView.postMessage(
+        JSON.stringify({
+          type: "NavigationBar",
+          data: {
+            title: "Saldo",
+          },
+        })
+      );
+    } catch (err) {
+      console.log("ReactNativeWebView not exist");
+    }
   }, []);
 
   function handleClickRecargar() {
