@@ -39,6 +39,7 @@ export default function Saldo() {
       },
     };
     TagManager.dataLayer(tagManagerArgs);
+    Router.push("/saldo/recargar");
   }
 
   function handleClickMultiplicar() {
