@@ -19,6 +19,8 @@ export default function Facturas() {
           type: "NavigationBar",
           data: {
             title: "Facturas",
+            buttonRight: true,
+            iconRight: "notifications-outline",
           },
         })
       );
