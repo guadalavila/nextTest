@@ -29,7 +29,7 @@ export default function Recargar() {
         </div>
 
         <button style={{ marginTop: 50 }} onClick={() => Router.push("")}>
-          Volver
+          Volver a
         </button>
       </main>
     </>
