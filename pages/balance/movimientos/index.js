@@ -11,7 +11,6 @@ export default function Movimientos() {
           data: {
             title: "Movimientos",
             buttonLeft: true,
-            iconLeft: "close",
           },
         })
       );
