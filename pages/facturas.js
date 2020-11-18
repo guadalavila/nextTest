@@ -22,6 +22,7 @@ export default function Facturas() {
             buttonRight: true,
             iconRight: "notifications-outline",
             buttonLeft: true,
+            backgroundColor: "#5BC500",
           },
         })
       );
