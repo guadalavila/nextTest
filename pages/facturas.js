@@ -21,6 +21,7 @@ export default function Facturas() {
             title: "Facturas",
             buttonRight: true,
             iconRight: "notifications-outline",
+            buttonLeft: true,
           },
         })
       );
