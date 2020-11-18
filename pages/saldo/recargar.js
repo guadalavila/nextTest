@@ -11,8 +11,8 @@ export default function Recargar() {
           data: {
             title: "Recargar",
             buttonLeft: true,
-            handleButtonLeftURI:
-              "https://next-test-git-main.guadalavila.vercel.app/",
+            buttonLeftURL:
+              "https://next-test-git-main.guadalavila.vercel.app/balance/movimientos",
           },
         })
       );
