@@ -20,7 +20,6 @@ export default function Facturas() {
           data: {
             title: "Facturas",
             buttonRight: true,
-            iconRight: "notifications-outline",
             buttonLeft: true,
             backgroundColor: "#5BC500",
           },
