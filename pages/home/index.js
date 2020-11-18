@@ -10,9 +10,7 @@ export default function Home() {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
           type: "NavigationBar",
-          data: {
-            title: "Home",
-          },
+          data: {},
         })
       );
     } catch (err) {
