@@ -11,8 +11,6 @@ export default function TerminosYCondiciones() {
           type: "NavigationBar",
           data: {
             title: "Términos y condiciones",
-            buttonLeft: true,
-            iconLeft: "close",
           },
         })
       );
