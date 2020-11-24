@@ -70,6 +70,8 @@ export default function Saldo() {
             color: "#fff",
             fontWeight: "bold",
             background: "#019df4",
+            borderRadius: 4,
+            borderWidth: 0,
           }}
           onClick={handleClickRecargar}
         >
@@ -82,7 +84,9 @@ export default function Saldo() {
             margin: 20,
             color: "#fff",
             fontWeight: "bold",
-            background: "#019df4",
+            background: "#5BC500",
+            borderRadius: 4,
+            borderWidth: 0,
           }}
           onClick={handleClickMultiplicar}
         >

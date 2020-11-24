@@ -40,7 +40,8 @@ export default function Home() {
             height: 50,
             marginBottom: 20,
             width: 300,
-            borderRadius: 10,
+            borderRadius: 4,
+            borderWidth: 0,
           }}
           onClick={handleVerFacturas}
         >
@@ -50,11 +51,12 @@ export default function Home() {
         </button>
         <button
           style={{
-            backgroundColor: "#007cad",
+            backgroundColor: "#019df4",
             height: 50,
             marginBottom: 20,
             width: 300,
-            borderRadius: 10,
+            borderRadius: 4,
+            borderWidth: 0,
           }}
           onClick={handleVerSaldo}
         >
