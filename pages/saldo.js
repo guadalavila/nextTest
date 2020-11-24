@@ -53,6 +53,7 @@ export default function Saldo() {
       },
     };
     TagManager.dataLayer(tagManagerArgs);
+    Router.push("/multiplicar");
   }
 
   return (

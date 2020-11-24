@@ -10,7 +10,6 @@ export default function Movimientos() {
           type: "NavigationBar",
           data: {
             title: "Movimientos",
-            buttonLeft: true,
           },
         })
       );
