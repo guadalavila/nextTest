@@ -19,8 +19,7 @@ export default function Saldo() {
           data: {
             title: "Saldo",
             buttonLeft: true,
-            iconLeft: "close",
-            reload: true,
+            backgroundColor: "#007cad",
           },
         })
       );
