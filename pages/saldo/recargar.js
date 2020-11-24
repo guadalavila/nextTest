@@ -9,10 +9,7 @@ export default function Recargar() {
         JSON.stringify({
           type: "NavigationBar",
           data: {
-            title: "Recargar",
-            buttonLeft: true,
-            buttonLeftURL:
-              "https://next-test-git-main.guadalavila.vercel.app/balance/movimientos",
+            showNavBar: false,
           },
         })
       );
@@ -27,10 +24,6 @@ export default function Recargar() {
         <div className={styles.grid}>
           <h1>Recarga</h1>
         </div>
-
-        <button style={{ marginTop: 50 }} onClick={() => Router.push("/home")}>
-          Volver
-        </button>
       </main>
     </>
   );
