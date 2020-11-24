@@ -59,9 +59,7 @@ export default function Saldo() {
   return (
     <>
       <main className={styles.main}>
-        <div className={styles.grid}>
-          <h1>Saldo</h1>
-        </div>
+        <div className={styles.grid}></div>
         <button
           style={{
             width: 250,
