@@ -63,9 +63,6 @@ export default function Facturas() {
             </button>
           </div>
         ))}
-        <button style={{ marginTop: 50 }} onClick={() => Router.back()}>
-          Volver
-        </button>
       </main>
     </>
   );

@@ -87,10 +87,6 @@ export default function Saldo() {
         >
           Multiplicar
         </button>
-
-        <button style={{ marginTop: 50 }} onClick={() => Router.back()}>
-          Volver
-        </button>
       </main>
     </>
   );
