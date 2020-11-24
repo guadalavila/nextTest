@@ -11,6 +11,7 @@ export default function Movimientos() {
           data: {
             title: "Movimientos",
             buttonLeft: true,
+            buttonLeftURL: "https://next-test.guadalavila.vercel.app/home",
           },
         })
       );
