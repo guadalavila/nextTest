@@ -11,7 +11,7 @@ export default function Home() {
         JSON.stringify({
           type: "NavigationBar",
           data: {
-            reload: true,
+            title: "Descubrí",
           },
         })
       );

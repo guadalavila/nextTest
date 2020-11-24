@@ -19,7 +19,6 @@ export default function Facturas() {
           type: "NavigationBar",
           data: {
             title: "Facturas",
-            buttonRight: true,
             buttonLeft: true,
             backgroundColor: "#5BC500",
           },
