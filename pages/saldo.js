@@ -20,6 +20,7 @@ export default function Saldo() {
             title: "Saldo",
             buttonLeft: true,
             iconLeft: "close",
+            reload: true,
           },
         })
       );
