@@ -19,7 +19,7 @@ export default function Saldo() {
           data: {
             title: "Saldo",
             buttonLeft: true,
-            iconLeft: "close",
+            iconClose: true,
             reload: true,
           },
         })
