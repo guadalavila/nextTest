@@ -12,20 +12,18 @@ export default function Saldo() {
       },
     };
     TagManager.dataLayer(tagManagerArgs);
-    try {
+    if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
           type: "NavigationBar",
           data: {
             title: "Saldo",
             buttonLeft: true,
-            iconClose: true,
+            iconLeft: "close",
             reload: true,
           },
         })
       );
-    } catch (err) {
-      console.log("ReactNativeWebView not exist");
     }
   }, []);
 

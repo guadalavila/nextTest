@@ -3,7 +3,7 @@ import styles from "../../styles/Home.module.css";
 
 export default function Multiplicar() {
   useEffect(() => {
-    try {
+    if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
           type: "NavigationBar",
@@ -15,8 +15,6 @@ export default function Multiplicar() {
           },
         })
       );
-    } catch (err) {
-      console.log("ReactNativeWebView not exist");
     }
   }, []);
 

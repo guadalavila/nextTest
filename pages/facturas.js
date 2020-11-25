@@ -13,7 +13,7 @@ export default function Facturas() {
       },
     };
     TagManager.dataLayer(tagManagerArgs);
-    try {
+    if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
           type: "NavigationBar",
@@ -24,8 +24,6 @@ export default function Facturas() {
           },
         })
       );
-    } catch (err) {
-      console.log("ReactNativeWebView not exist");
     }
   }, []);
 

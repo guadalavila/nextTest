@@ -6,7 +6,7 @@ import TagManager from "react-gtm-module";
 
 export default function Home() {
   useEffect(() => {
-    try {
+    if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
           type: "NavigationBar",
@@ -15,8 +15,6 @@ export default function Home() {
           },
         })
       );
-    } catch (err) {
-      console.log("ReactNativeWebView not exist");
     }
   }, []);
 
