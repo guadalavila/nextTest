@@ -62,6 +62,21 @@ export default function Home() {
             Ver detalle de Saldo
           </span>
         </button>
+        <button
+          style={{
+            backgroundColor: "#019df4",
+            height: 50,
+            marginBottom: 20,
+            width: 300,
+            borderRadius: 4,
+            borderWidth: 0,
+          }}
+          onClick={() => Router.push("/monto")}
+        >
+          <span style={{ color: "#fff", fontWeight: "bold", fontSize: 16 }}>
+            Ver monto
+          </span>
+        </button>
         <div className={styles.grid}></div>
       </main>
     </div>
