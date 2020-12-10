@@ -5,9 +5,15 @@ import { useEffect } from "react";
 import TagManager from "react-gtm-module";
 
 export default function Home() {
-  var isMobile = /Mobile/i.test(navigator.userAgent);
-  alert(isMobile);
   useEffect(() => {
+    const userAgent =
+      typeof window.navigator === "undefined" ? "" : navigator.userAgent;
+    const mobile = Boolean(
+      userAgent.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+      )
+    );
+    alert(mobile);
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
