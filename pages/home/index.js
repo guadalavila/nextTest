@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import TagManager from "react-gtm-module";
 
 export default function Home() {
+  var isMobile = /Mobile/i.test(navigator.userAgent);
+  alert(isMobile);
   useEffect(() => {
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
