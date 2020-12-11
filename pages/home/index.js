@@ -4,10 +4,15 @@ import Router from "next/router";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 
+const Texto = (className) => {
+  return <div className={className.className}>hola</div>;
+};
+
 export default function Home() {
   const [isReactNativeWebView, setReactNativeWebView] = useState(true);
 
   useEffect(() => {
+    alert(window.ReactNativeWebView);
     window.ReactNativeWebView
       ? setReactNativeWebView(true)
       : setReactNativeWebView(false);
@@ -82,7 +87,7 @@ export default function Home() {
             Ver monto
           </span>
         </button>
-        {!isReactNativeWebView && <div>hola</div>}
+        <Texto className={!isReactNativeWebView ? styles.notVisible : ""} />
         <div className={styles.grid}></div>
       </main>
     </div>
