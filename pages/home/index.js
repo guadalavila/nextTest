@@ -1,19 +1,16 @@
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import Router from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 
 export default function Home() {
+  const [isReactNativeWebView, setReactNativeWebView] = useState(true);
+
   useEffect(() => {
-    const userAgent =
-      typeof window.navigator === "undefined" ? "" : navigator.userAgent;
-    const mobile = Boolean(
-      userAgent.match(
-        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-      )
-    );
-    alert(mobile);
+    window.ReactNativeWebView
+      ? setReactNativeWebView(true)
+      : setReactNativeWebView(false);
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
@@ -85,6 +82,7 @@ export default function Home() {
             Ver monto
           </span>
         </button>
+        {!isReactNativeWebView && <div>hola</div>}
         <div className={styles.grid}></div>
       </main>
     </div>
