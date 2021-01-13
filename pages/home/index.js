@@ -12,7 +12,6 @@ export default function Home() {
   const [isReactNativeWebView, setReactNativeWebView] = useState(true);
 
   useEffect(() => {
-    alert(window.ReactNativeWebView);
     window.ReactNativeWebView
       ? setReactNativeWebView(true)
       : setReactNativeWebView(false);
