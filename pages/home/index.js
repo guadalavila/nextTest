@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 
 const Texto = (className) => {
-  return <div className={className.className}>chau-hola</div>;
+  return <div className={className.className}>chau!!!!</div>;
 };
 
 export default function Home() {
@@ -68,7 +68,7 @@ export default function Home() {
           onClick={handleVerSaldo}
         >
           <span style={{ color: "#fff", fontWeight: "bold", fontSize: 16 }}>
-            Ver detalle de Saldo
+            Ver detalle de Saldo ok
           </span>
         </button>
         <button
