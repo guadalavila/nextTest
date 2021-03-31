@@ -9,7 +9,8 @@ export default function Recargar() {
         JSON.stringify({
           type: "NavigationBar",
           data: {
-            showNavBar: false,
+            title:"Recarga",
+            buttonLeft: true
           },
         })
       );
