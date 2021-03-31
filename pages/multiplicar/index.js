@@ -10,8 +10,6 @@ export default function Multiplicar() {
           data: {
             title: "Multiplicate",
             buttonLeft: true,
-            buttonLeftURL:
-              "https://next-test.guadalavila.vercel.app/balance/movimientos",
           },
         })
       );
