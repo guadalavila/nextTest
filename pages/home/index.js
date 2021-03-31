@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 
 const Texto = (className) => {
-  return <div className={className.className}>hola</div>;
+  return <div className={className.className}>chau</div>;
 };
 
 export default function Home() {
