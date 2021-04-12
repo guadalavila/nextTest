@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import styles from "../../styles/Home.module.css";
 
 export default function Notificaciones() {
-  const [touch, setState] = useState(false);
 
   const handleBtnRight = () =>{
     console.log("se presiono botón");
