@@ -18,10 +18,7 @@ export default function Notificaciones() {
             buttonLeft: true,
             buttonRight: true,
             iconRight: "close",
-            buttonRightURL: "",
-            handleButtonRight:() => {
-              console.log("click");
-            }
+            buttonRightURL: ""
           },
         })
       );
