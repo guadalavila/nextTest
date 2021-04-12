@@ -17,7 +17,7 @@ export default function Notificaciones() {
             buttonLeft: true,
             buttonRight: true,
             iconRight: "close",
-            buttonRightURL: ""
+            buttonRightURL: "https://www.google.com/"
           },
         })
       );
