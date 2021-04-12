@@ -2,6 +2,12 @@ import { useEffect } from "react";
 import styles from "../../styles/Home.module.css";
 
 export default function Notificaciones() {
+  const [touch, setState] = useState(false);
+
+  const handleBtnRight = () =>{
+    console.log("se presiono botón");
+  }
+
   useEffect(() => {
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
@@ -10,6 +16,10 @@ export default function Notificaciones() {
           data: {
             title: "Monto",
             buttonLeft: true,
+            buttonRight: true,
+            handleButtonRight:() => {
+              console.log("click");
+            }
           },
         })
       );
