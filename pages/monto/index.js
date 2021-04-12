@@ -17,6 +17,8 @@ export default function Notificaciones() {
             title: "Monto",
             buttonLeft: true,
             buttonRight: true,
+            iconRight: "close",
+            buttonRightURL: "",
             handleButtonRight:() => {
               console.log("click");
             }
