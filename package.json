@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "crypto-js": "^4.0.0",
+    "js-crypto-aes": "^1.0.2",
     "next": "9.5.5",
     "react": "16.14.0",
     "react-dom": "16.14.0",

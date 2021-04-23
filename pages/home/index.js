@@ -3,6 +3,7 @@ import styles from "../../styles/Home.module.css";
 import Router from "next/router";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
+import CryptoJS from 'crypto-js';
 
 const Texto = (className) => {
   return <div className={className.className}>chau!!!!</div>;
@@ -21,6 +22,8 @@ export default function Home() {
           type: "NavigationBar",
           data: {
             title: "Descubrí",
+            buttonRight: false,
+            buttonLeft: false
           },
         })
       );
