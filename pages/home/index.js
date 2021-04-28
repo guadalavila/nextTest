@@ -17,7 +17,6 @@ export default function Home() {
     const onReceiveMessage = useCallback((nativeEvent) => {
       try {
         let nativeMessage = JSON.parse(nativeEvent.data);
-        console.log(nativeMessage);
             if(nativeMessage.action === "clickRightButton"){
               setName(Math.floor(Math.random()*1000))
             }

@@ -6,13 +6,13 @@ import TagManager from "react-gtm-module";
 
 export default function Facturas() {
   useEffect(() => {
-    const tagManagerArgs = {
-      dataLayer: {
-        event: "screenView",
-        pageName: "facturas_ultimas_facturas",
-      },
-    };
-    TagManager.dataLayer(tagManagerArgs);
+    // const tagManagerArgs = {
+    //   dataLayer: {
+    //     event: "screenView",
+    //     pageName: "facturas_ultimas_facturas",
+    //   },
+    // };
+    // TagManager.dataLayer(tagManagerArgs);
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
@@ -28,16 +28,16 @@ export default function Facturas() {
   }, []);
 
   function handleClickVerFactura(periodo) {
-    const tagManagerArgs = {
-      dataLayer: {
-        event: "facturas",
-        eventCategory: "facturas",
-        eventAction: "ver detalles de factura",
-        eventLabel: `factura del mes ${periodo}`,
-        eventValue: 2020,
-      },
-    };
-    TagManager.dataLayer(tagManagerArgs);
+    // const tagManagerArgs = {
+    //   dataLayer: {
+    //     event: "facturas",
+    //     eventCategory: "facturas",
+    //     eventAction: "ver detalles de factura",
+    //     eventLabel: `factura del mes ${periodo}`,
+    //     eventValue: 2020,
+    //   },
+    // };
+    // TagManager.dataLayer(tagManagerArgs);
   }
   return (
     <>

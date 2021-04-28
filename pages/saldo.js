@@ -5,13 +5,13 @@ import TagManager from "react-gtm-module";
 
 export default function Saldo() {
   useEffect(() => {
-    const tagManagerArgs = {
-      dataLayer: {
-        event: "screenView",
-        pageName: "saldo",
-      },
-    };
-    TagManager.dataLayer(tagManagerArgs);
+    // const tagManagerArgs = {
+    //   dataLayer: {
+    //     event: "screenView",
+    //     pageName: "saldo",
+    //   },
+    // };
+    // TagManager.dataLayer(tagManagerArgs);
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(
         JSON.stringify({
@@ -28,29 +28,29 @@ export default function Saldo() {
   }, []);
 
   function handleClickRecargar() {
-    const tagManagerArgs = {
-      dataLayer: {
-        event: "saldo",
-        eventCategory: "saldo",
-        eventAction: "detalles de saldo",
-        eventLabel: "recargar",
-        eventValue: 50,
-      },
-    };
-    TagManager.dataLayer(tagManagerArgs);
+    // const tagManagerArgs = {
+    //   dataLayer: {
+    //     event: "saldo",
+    //     eventCategory: "saldo",
+    //     eventAction: "detalles de saldo",
+    //     eventLabel: "recargar",
+    //     eventValue: 50,
+    //   },
+    // };
+    // TagManager.dataLayer(tagManagerArgs);
     Router.push("/saldo/recargar");
   }
 
   function handleClickMultiplicar() {
-    const tagManagerArgs = {
-      dataLayer: {
-        event: "saldo",
-        eventCategory: "saldo",
-        eventAction: "detalles de saldo",
-        eventLabel: "multiplicar",
-      },
-    };
-    TagManager.dataLayer(tagManagerArgs);
+    // const tagManagerArgs = {
+    //   dataLayer: {
+    //     event: "saldo",
+    //     eventCategory: "saldo",
+    //     eventAction: "detalles de saldo",
+    //     eventLabel: "multiplicar",
+    //   },
+    // };
+    // TagManager.dataLayer(tagManagerArgs);
     Router.push("/multiplicar");
   }
 
