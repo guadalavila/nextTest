@@ -2,23 +2,17 @@ import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import Router from "next/router";
 import { useCallback, useEffect, useState } from "react";
-import TagManager from "react-gtm-module";
-import CryptoJS from "crypto-js";
-
-const Texto = (className) => {
-    return <div className={className.className}>chau!!!!</div>;
-};
 
 export default function Home() {
     const [isReactNativeWebView, setReactNativeWebView] = useState(true);
-    const [name, setName] = useState(6);
+    const [value, setValue] = useState(600);
 
 
     const onReceiveMessage = useCallback((nativeEvent) => {
       try {
         let nativeMessage = JSON.parse(nativeEvent.data);
             if(nativeMessage.action === "clickRightButton"){
-              setName(Math.floor(Math.random()*1000))
+                setValue(Math.floor(Math.random()*1000))
             }
             return () => {
               window.removeEventListener('message', onReceiveMessage);
@@ -34,7 +28,7 @@ export default function Home() {
     //     let nativeMessage = JSON.parse(nativeEvent.data);
     //     console.log(nativeMessage)
     //     // if(nativeMessage.action === "clickRightButton"){
-    //     //   setName(Math.floor(Math.random()*1000))
+    //     //   setValue(Math.floor(Math.random()*1000))
     //     // }
     //   } catch (err) {
     //     return;
@@ -55,7 +49,6 @@ export default function Home() {
                         buttonRight: true,
                         buttonRightText: "Editar",
                         disabledRightButton: false,
-                        // iconRight: 'close'
                     },
                 }),
             );
@@ -76,7 +69,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
-                <div>{name}</div>
+                <div style={{fontWeight:"bold", fontSize:30}}>{value}</div>
                 <button
                     style={{
                         backgroundColor: "#019df4",
@@ -140,9 +133,6 @@ export default function Home() {
                         Ver monto
                     </span>
                 </button>
-                <Texto
-                    className={!isReactNativeWebView ? styles.notVisible : ""}
-                />
                 <div className={styles.grid}></div>
             </main>
         </div>
