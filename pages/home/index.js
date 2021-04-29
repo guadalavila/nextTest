@@ -13,6 +13,19 @@ export default function Home() {
         let nativeMessage = JSON.parse(nativeEvent.data);
             if(nativeMessage.action === "clickRightButton"){
                 setValue(Math.floor(Math.random()*1000))
+                if (window.ReactNativeWebView) {
+                    window.ReactNativeWebView.postMessage(
+                        JSON.stringify({
+                            type: "NavigationBar",
+                            data: {
+                                title: "Descubrí",
+                                buttonRight: true,
+                                buttonRightText: "Cambiar",
+                                disabledRightButton: false,
+                            },
+                        }),
+                    );
+                }
             }
             return () => {
               window.removeEventListener('message', onReceiveMessage);
@@ -69,7 +82,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
-                <div style={{fontWeight:"bold", fontSize:30}}>{value}</div>
+                <div style={{fontWeight:"bold", fontSize:50}}>{value}</div>
                 <button
                     style={{
                         backgroundColor: "#019df4",
