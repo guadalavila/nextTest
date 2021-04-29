@@ -7,7 +7,8 @@ export default function Home() {
     const [isReactNativeWebView, setReactNativeWebView] = useState(true);
     const [value, setValue] = useState(600);
     const [edit, setEdit] = useState(false);
-    
+    const [enabled, setEnabled] = useState(true);
+
     useEffect(() => {
         const onReceiveMessage = (nativeEvent) => {
             try {
@@ -55,6 +56,23 @@ export default function Home() {
             );
         }
     }, []);
+
+    const disableButton = () => {
+        if (window.ReactNativeWebView) {
+            setEnabled(!enabled);
+            window.ReactNativeWebView.postMessage(
+                JSON.stringify({
+                    type: "NavigationBar",
+                    data: {
+                        title: "Descubrí",
+                        buttonRight: true,
+                        buttonRightText: "Editar",
+                        disabledRightButton: enabled,
+                    },
+                }),
+            );
+        }
+    };
 
     function handleVerFacturas() {
         Router.push("/facturas");
@@ -134,7 +152,32 @@ export default function Home() {
                         Ver monto
                     </span>
                 </button>
-                <div className={styles.grid}></div>
+                <button
+                    style={{
+                        height: 50,
+                        marginBottom: 20,
+                        width: 300,
+                        borderRadius: 4,
+                        borderWidth: 2,
+                        background: "white",
+                        borderColor: "#019df4",
+                    }}
+                    onClick={() => disableButton()}
+                >
+                    <span
+                        style={{
+                            color: "#019df4",
+                            fontWeight: "bold",
+                            fontSize: 16,
+                        }}
+                    >
+                        {enabled ? (
+                            <p>Desabilitar Botón</p>
+                        ) : (
+                            <p>Habilitar Botón</p>
+                        )}
+                    </span>
+                </button>
             </main>
         </div>
     );
