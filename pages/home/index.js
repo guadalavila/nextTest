@@ -20,7 +20,7 @@ export default function Home() {
                             data: {
                                 title: "Descubrí",
                                 buttonRight: true,
-                                buttonRightText: "Cambiar",
+                                buttonRightText: "Listo",
                                 disabledRightButton: false,
                             },
                         }),
