@@ -6,52 +6,38 @@ import { useCallback, useEffect, useState } from "react";
 export default function Home() {
     const [isReactNativeWebView, setReactNativeWebView] = useState(true);
     const [value, setValue] = useState(600);
-    const [edit, setEdit] = useState(false)
-
-
-    const onReceiveMessage = useCallback((nativeEvent) => {
-      try {
-        let nativeMessage = JSON.parse(nativeEvent.data);
-            if(nativeMessage.action === "clickRightButton"){
-                setEdit(!edit);
-                setValue(Math.floor(Math.random()*1000))
-                if (window.ReactNativeWebView) {
+    const [edit, setEdit] = useState(false);
+    
+    useEffect(() => {
+        const onReceiveMessage = (nativeEvent) => {
+            try {
+                let nativeMessage = JSON.parse(nativeEvent.data);
+                if (nativeMessage.action === "clickRightButton") {
+                    setEdit(!edit);
+                    setValue(Math.floor(Math.random() * 1000));
                     window.ReactNativeWebView.postMessage(
                         JSON.stringify({
                             type: "NavigationBar",
                             data: {
                                 title: "Descubrí",
                                 buttonRight: true,
-                                buttonRightText: edit ? "Listo": "Editar",
+                                buttonRightText: edit ? "Editar" : "Listo",
                                 disabledRightButton: false,
                             },
                         }),
                     );
                 }
+            } catch (err) {
+                return;
             }
-            return () => {
-              window.removeEventListener('message', onReceiveMessage);
-            };
-        } catch (err) {
-            return;
-        }
-    }, []);
-
-    // const onReceiveMessage = (nativeEvent) => {
-    //   console.log(nativeEvent)
-    //   try {
-    //     let nativeMessage = JSON.parse(nativeEvent.data);
-    //     console.log(nativeMessage)
-    //     // if(nativeMessage.action === "clickRightButton"){
-    //     //   setValue(Math.floor(Math.random()*1000))
-    //     // }
-    //   } catch (err) {
-    //     return;
-    //   }
-    // }
+        };
+        window.addEventListener("message", onReceiveMessage);
+        return () => {
+            window.removeEventListener("message", onReceiveMessage);
+        };
+    }, [edit, setEdit]);
 
     useEffect(() => {
-        window.addEventListener("message", onReceiveMessage);
         window.ReactNativeWebView
             ? setReactNativeWebView(true)
             : setReactNativeWebView(false);
@@ -84,7 +70,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
-                <div style={{fontWeight:"bold", fontSize:50}}>{value}</div>
+                <div style={{ fontWeight: "bold", fontSize: 50 }}>{value}</div>
                 <button
                     style={{
                         backgroundColor: "#019df4",
