@@ -6,12 +6,14 @@ import { useCallback, useEffect, useState } from "react";
 export default function Home() {
     const [isReactNativeWebView, setReactNativeWebView] = useState(true);
     const [value, setValue] = useState(600);
+    const [edit, setEdit] = useState(false)
 
 
     const onReceiveMessage = useCallback((nativeEvent) => {
       try {
         let nativeMessage = JSON.parse(nativeEvent.data);
             if(nativeMessage.action === "clickRightButton"){
+                setEdit(!edit);
                 setValue(Math.floor(Math.random()*1000))
                 if (window.ReactNativeWebView) {
                     window.ReactNativeWebView.postMessage(
@@ -20,7 +22,7 @@ export default function Home() {
                             data: {
                                 title: "Descubrí",
                                 buttonRight: true,
-                                buttonRightText: "Listo",
+                                buttonRightText: edit ? "Listo": "Editar",
                                 disabledRightButton: false,
                             },
                         }),
