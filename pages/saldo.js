@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import styles from "../styles/Home.module.css";
-import Router from "next/router";
 import TagManager from "react-gtm-module";
+import { useRouter } from 'next/router';
 
 export default function Saldo() {
+  const router = useRouter();
   useEffect(() => {
     // const tagManagerArgs = {
     //   dataLayer: {
@@ -38,7 +39,7 @@ export default function Saldo() {
     //   },
     // };
     // TagManager.dataLayer(tagManagerArgs);
-    Router.push("/saldo/recargar");
+    router.push("/saldo/recargar");
   }
 
   function handleClickMultiplicar() {
@@ -51,7 +52,7 @@ export default function Saldo() {
     //   },
     // };
     // TagManager.dataLayer(tagManagerArgs);
-    Router.push("/multiplicar");
+    router.push("/multiplicar");
   }
 
   return (

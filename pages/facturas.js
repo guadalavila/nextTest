@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import styles from "../styles/Home.module.css";
-import Router from "next/router";
 import { facturas } from "../utils/mock";
 import TagManager from "react-gtm-module";
 

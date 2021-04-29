@@ -1,9 +1,10 @@
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
-import Router from "next/router";
 import { useCallback, useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 
 export default function Home() {
+    const router = useRouter();
     const [isReactNativeWebView, setReactNativeWebView] = useState(true);
     const [value, setValue] = useState(600);
     const [edit, setEdit] = useState(false);
@@ -75,10 +76,10 @@ export default function Home() {
     };
 
     function handleVerFacturas() {
-        Router.push("/facturas");
+        router.push("/facturas");
     }
     function handleVerSaldo() {
-        Router.push("/saldo");
+        router.push("/saldo");
     }
 
     return (
@@ -140,7 +141,7 @@ export default function Home() {
                         borderRadius: 4,
                         borderWidth: 0,
                     }}
-                    onClick={() => Router.push("/monto")}
+                    onClick={() => router.push("/monto")}
                 >
                     <span
                         style={{
