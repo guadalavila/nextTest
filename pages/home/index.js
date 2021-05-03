@@ -173,7 +173,7 @@ export default function Home() {
                         }}
                     >
                         {enabled ? (
-                            <p>Desabilitar Botón</p>
+                            <p>Deshabilitar Botón</p>
                         ) : (
                             <p>Habilitar Botón</p>
                         )}
