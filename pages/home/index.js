@@ -90,7 +90,7 @@ export default function Home() {
             </Head>
             <main className={styles.main}>
                 <div style={{ fontWeight: "bold", fontSize: 50 }}>{value}</div>
-                {/* <button
+                <button
                     style={{
                         backgroundColor: "#019df4",
                         height: 50,
@@ -110,8 +110,8 @@ export default function Home() {
                     >
                         Ver Facturas
                     </span>
-                </button> */}
-                {/* <button
+                </button> 
+                 <button
                     style={{
                         backgroundColor: "#019df4",
                         height: 50,
@@ -131,8 +131,8 @@ export default function Home() {
                     >
                         Ver detalle de Saldo ok
                     </span>
-                </button> */}
-                {/* <button
+                </button>
+            <button
                     style={{
                         backgroundColor: "#019df4",
                         height: 50,
@@ -152,7 +152,7 @@ export default function Home() {
                     >
                         Ver monto
                     </span>
-                </button> */}
+                </button>
                 <button
                     style={{
                         height: 50,
