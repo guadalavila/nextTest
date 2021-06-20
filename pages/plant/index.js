@@ -27,7 +27,7 @@ function Plant() {
                 <h3>Plantas de la Semana</h3>
                 <div className={styles.containerFlex}>
                     {plants.map((elem) => (
-                        <div className={styles.containerPlant}>
+                        <div className={styles.containerPlant} key={elem.name}>
                             <h4>{elem.name}</h4>
                             <div className={styles.containerImage}>
                                 <img src={elem.image} height={100} />
