@@ -21,8 +21,9 @@ export default function Device() {
                 <div>
                     <p>
                         <strong>JSON: </strong>
-                        {data}
+                        <pre>{data}</pre>
                     </p>
+                    <p>---------------------------</p>
                     <p>
                         <strong>AppName: </strong>
                         {deviceInfo?.applicationName}
