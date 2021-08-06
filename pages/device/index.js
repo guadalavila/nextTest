@@ -23,7 +23,6 @@ export default function Device() {
                         <strong>JSON: </strong>
                         {data}
                     </p>
-                    <p>---------------------------------------------------------------------------------------</p>
                     <p>
                         <strong>AppName: </strong>
                         {deviceInfo?.applicationName}
