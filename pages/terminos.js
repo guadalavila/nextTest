@@ -9,7 +9,8 @@ export default function TerminosYCondiciones() {
         JSON.stringify({
           type: "NavigationBar",
           data: {
-            title: "Términos y condiciones",
+            title: "Términos y condiciones términos y condiciones términos y condiciones",
+        
           },
         })
       );
