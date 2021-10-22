@@ -11,7 +11,6 @@ export default function TerminosYCondiciones() {
           data: {
             title: "Términos y condiciones",
             buttonLeft: true,
-            reload: true
           },
         })
       );
