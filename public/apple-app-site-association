@@ -1,0 +1,32 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "7C893PWHR8.com.services.movistar.4glte",
+                "paths": [
+                    "*"
+                ]
+            },
+            {
+                "appID": "7C893PWHR8.com.services.movistar.ar.beta",
+                "paths": [
+                    "*"
+                ]
+            },
+            {
+                "appID": "7C893PWHR8.com.services.movistar.ar.f5",
+                "paths": [
+                    "*"
+                ]
+            }
+        ]
+    },
+    "webcredentials": {
+        "apps": [
+            "7C893PWHR8.com.services.movistar.4glte",
+            "7C893PWHR8.com.services.movistar.ar.beta",
+            "7C893PWHR8.com.services.movistar.ar.f5"
+        ]
+    }
+}
